@@ -1,0 +1,158 @@
+% 190316 comida.chingona ------------------------------------------------
+
+# comunidades
+impulsogeek.com
+
+# Herramientas
+jitsi/mumble
+mydns
+github
+leaftjs
+
+github.com/pixeleado/comida_chingona
+
+# Referencias
+mapapulque.ro
+crimen-mexico.org
+leaftjs
+openstreetmaps.org
+
+
+----------------------------------------------
+
+python
+    django
+        orm
+
+orm object relational management (existirá para relacionales y no relacionales)
+
+mvc (patrón de diseño)              modelo vista    controlador
+mtc (patron de diseño de django)    modelo template view(controlador)
+
+postgresql
+mariadb(fork mysql)
+
+
+-----------------------
+# Nuestro Development Stack
+linux
+miniconda
+virtualenv3.7
+django2.x
+python manage.py runserver
+postgresql
+
+--------------------------------------
+
+% 190321 meetup_Fedora-México ------------------------------------------------
+
+
+http://whatcanidoforfedora.org/
+
+
+Coding python 
+Packaging
+QA AND TESTIGN
+Instruction
+
+en que se hizo la presentación?
+
+st@rlight
+
+HTML5 para presentaciones.
+impress.js con vectores
+
+
+--------------------------------------
+
+% 190323 comida.chingona ------------------------------------------------
+
+figlet comida chingona
+
+djangosuite
+adminlte
+
+activity launcher para android.
+
+tockens, modulos de autenticación.
+
+s3rv1c105
+
+
+gwolf.org
+
+---------------------------------
+
+% 190330 comida.chingona ------------------------------------------------
+
+sudo docker build
+sudo docker-compose up
+sudo docker-compose exec web bash
+
+crear modelo maps
+agregar el objeto maps al arhivo settings
+makemigrations maps   (crea la traducción del modelo con el lenguaje de la base de datos)
+migrate (aplica los cambios a la base de datos)
+
+
+
+----------------------------------
+
+elixir
+github/resuelve
+
+fabric está hecho con python
+vagrant 
+
+
+
+orm object relational mapping
+
+-------------------
+
+store procedures
+
+checar django modelsfields para ver los tipos de datos 
+
+uuid en los id (key). investigar como cambiar id a uuid
+
+como crear nuestros formularos en django forms 
+
+Para administrar contenido, post, fotos, etc.
+cms framework -- > plom 
+cms flatfile --> grav
+
+producto minimo viable 
+
+-----------------------------------------------
+admin suit (django suit) front end para el admin
+
+adminlte2 (django adminlte2) front end para el usuario
+
+bootstrap 
+
+
+---------------------------------
+
+clases basadas en vistas
+add django class based view to admin site.
+
+
+--------------------------------------
+
+djangoproject.com
+
+django suit
+
+python zen
+zen of python by example
+
+# Modulo standar para logear 
+import logger
+
+cuantos usuarios recurrentes ? sql lite ferificar cuantos usuarios recurrentes hay 
+
+chef rogelio lara
+
+
+

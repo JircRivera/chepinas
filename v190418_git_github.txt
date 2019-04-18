@@ -1,0 +1,99 @@
+# git con Github, la chepina (El recetario jejej)
+# git y github son dos cosas diferentes, git (herramienta o aplicación para gestionar un Distributed Version Control System) y Github (servicio en la nube para hostear un servidor git o repositorio git remoto).
+# --- Prerequisitos:
+# 1. instalar git https://git-scm.com/
+# 2. abrir cuenta en github https://github.com/
+
+# ---   Configuración básica de git
+# Nombre, email, colores
+git config --global user.name "Nombre Apellido"
+git config --global user.email "mymail@dominio.com"
+git config --global color.ui true
+git config --global color.status auto
+git config --global color.branch auto
+# Config para LINUX, convierte CRLF a LF al hacer checkout
+git config --global core.autocrlf input
+# Config para WINDOWS, convierte LF a CRLF al hacer checkout and CRLF a LF al hacer commit 
+git config --global core.autocrlf true
+
+# Revisar la Configuración
+git config --list
+
+# ---   Configuración de git con tu repo remoto (github)
+# Generar tu propio par de llaves ssh (formada por una key publica y otra privada)
+# CUIDADO!!! Nunca compartas tu llave privada
+ssh-keygen
+# Comparte tu llave PUBLICA (.pub), con tu cuenta en Github
+ssh-copy-id -i ~/.ssh/id_rsa.pub gituser@git.server.com
+# Agregar a git un repositorio remoto (origin), github en este caso 
+git remote add origin gituser@git.server.com:project.git
+git remote add origin https://github.com/cubeton/mynewrepository.git
+
+# A partir de este momento puedes: 
+# 1. Iniciar un proyecto y subirlo a Github
+# 2. Clonar un repo existente en Github
+
+# ---   1. Iniciar un proyecto y subirlo a Github
+# Crea la carpeta de tu proyecto 
+mkdir miProyecto
+cd miProyecto/
+
+# Inicializa tu proyecto (crea una carpeta .git dentro de miProyecto)
+git init
+
+# Crea un archivo, por ejemplo README 
+touch README
+# o con:
+cat <<EOF > README
+EOF
+
+# Revisa los cambio en tu carpeta, los cambios se etiquetan con "??"
+git status -s
+
+# Agrega todos los cambios al "indice" mejor conocido como el "escenario" (staging). Puedes agregar solo los archivos que te interesan con "add myfile"
+# IPORTANTE!!! el punto al final de la instrucción significa TODOS los archivos con cambios.
+git add .
+
+# Revisa nuevamente el estatus. ahora los archivos estan etiquetados con "A"
+git status -s
+
+# Crea un punto de control y agrega los cambios en "stage" con commit, agregandole un mensaje "-m" lo suficientemente claro sobre los cambios realizados.  
+git commit -m 'Este es el commit inicial'
+
+# Guarda los cambios en el repositorio remoto "origin" en la rama "master"
+git push origin master 
+
+# Revisa el log para consultar cualquier cambio en git 
+git log
+
+
+# ---   2. Clonar un repo existente en Github
+# Clonar un repo usando el protocolo ssh
+git clone gituser@git.server.com:project.git
+# Clonar un repo usando el protocolo https://
+git clone https://github.com/libgit2/libgit2
+# Clonar un repo usando el protocolo git
+git://github.com/libgit2/libgit2
+
+
+# ---  3. Hacer cambios 
+# Descargar los nuevos cambios en el origen de la rama master
+git pull origin master
+
+# Crear una nueva rama
+git checkout -b <my branch name>
+git push origin my-new-branch
+
+# Ver todas las ramas
+git branch
+
+# Crear un pull request
+
+# Merge a pull request
+
+
+# REFERENCIAS:
+https://www.tutorialspoint.com/git/index.htm
+https://product.hubspot.com/blog/git-and-github-tutorial-for-beginners
+https://git-scm.com/book/en/v2/Git-Basics-Getting-a-Git-Repository
+

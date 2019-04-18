@@ -1,0 +1,100 @@
+CEPH, Block Storage for the 21st Century
+
+Systema de almacenamiento.
+_por bloques
+_por objetos
+Sistema de archivos: ceph filesystem
+Versiones actualmente usadas jewel and luminous
+OSD
+
+CRUSH algorithm psudoprobabilistico.  Bloom Filter 
+
+Red de baja latencia o replicación asincrona.
+
+1100 opciones de configuración (candidato a optimización con computo evolutivo)
+Se puede evaluar cada configuración??
+
+------------------------
+
+Consideraciones para implementar un lab?
+#REQUERIMIENTOS
+3 monitores
+3 ndos OSD
+1 disco por nodo de OSD 
+
+#INSTALACIÓN
+Ceph-ansible 
+version de ceph + version de ceph-ansible + ansible 
+
+el ponente usó centos, pero hay para todas las distribuciones.
+
+---------------------------
+
+Consideraciones para implementar en PRODUCCIÓN.
+
+Para que se quiere?? qué se quiere resolver??
+
+
+
+NO se puede tener todo en una arquitectura distribuida:
+Teorema de CAP
+* Consistency
+* Availability
+* Partition Tolerance
+
+Solo se pueden tener dos. 
+
+
+Base de datos de articulos de Google de spaner, ello dicen que lo pueden resolver.
+
+-----------------------------
+
+Fallas de red no siempre se ven claramente en el cluster
+Relojes con falla de sincronización
+Falla del device de jounal
+Falla de un disco
+% de uso del cluster
+
+----------------------------
+
+Papers de sage weil en google scholar
+Tesis doctoral de Sage weil
+
+
+----------------------------
+
+
+Blue Store
+XFS
+REST
+atomico
+
+
+alsotoes at gmail dot com 
+@alsotoes
+
+
+pruebas de atp
+rados benchmark 
+
+
+
+viernes 26 de Abril, Centro de Innovacion y Desarrollo de la ANUIES
+
+
+
+
+**************************************************
+
+
+sg.com.mx/buzz/ponencias
+
+ffmpeg -i input.flv -c copy -copyts output.mp4
+
+khan academi 
+
+libreofice. 
+
+ZenLinux
+
+
