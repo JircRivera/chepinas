@@ -96,4 +96,19 @@ git branch
 https://www.tutorialspoint.com/git/index.htm
 https://product.hubspot.com/blog/git-and-github-tutorial-for-beginners
 https://git-scm.com/book/en/v2/Git-Basics-Getting-a-Git-Repository
+https://stackoverflow.com/questions/5561295/what-does-git-push-u-mean
+https://mislav.net/2010/07/git-tips/
+
+
+
+git init
+git add .
+git commit -m "JIRC First Commit"
+git remote add origin https://github.com/JircRivera/chepinas.git
+git remote -v
+git push -u origin master
+# after modify a file:
+git add .
+git commit -m "JIRC Update git_github"
+git push
 
