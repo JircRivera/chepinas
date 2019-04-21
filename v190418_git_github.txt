@@ -109,8 +109,30 @@ git remote add origin https://github.com/JircRivera/chepinas.git
 # Verifies the new remote URL
 git remote -v
 git push -u origin master
-# after modify a file:
+
+# after modifying a file:
 git add .
 git commit -m "JIRC Update git_github"
 git push
 
+# Crear una nueva rama y hacer push 
+git branch
+git add .
+git commit -m "JIRC-branch Update git_github"
+git checkout -b JIRC_01
+git push -u origin JIRC_01
+
+# Crear repo local, agreagar un origin y hacer push
+git init
+git add .
+git commit -m "JIRC First Commit"
+# Sets the new remote
+git remote add origin https://github.com/JircRivera/freelanceWebPage01.git
+# Verifies the new remote URL
+git remote -v
+git push -u origin master
+
+# Updating a Repo 
+git add .
+git commit -m "Add README.txt"
+git push
