@@ -162,7 +162,10 @@ https://i.stack.imgur.com/cEJjT.png
 # Fork a Repo
 https://help.github.com/en/articles/fork-a-repo
 
+# Caching your GitHub password in Git
+https://help.github.com/en/articles/caching-your-github-password-in-git
 
-
+# Connecting to GitHub with SSH
+https://help.github.com/en/articles/connecting-to-github-with-ssh
 
 
