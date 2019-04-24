@@ -1,8 +1,12 @@
 # git con Github, la chepina (El recetario jejej)
 # git y github son dos cosas diferentes, git (herramienta o aplicación para gestionar un Distributed Version Control System) y Github (servicio en la nube para hostear un servidor git o repositorio git remoto).
+
+
 # --- Prerequisitos:
 # 1. instalar git https://git-scm.com/
 # 2. abrir cuenta en github https://github.com/
+
+
 
 # ---   Configuración básica de git
 # Nombre, email, colores
@@ -19,15 +23,15 @@ git config --global core.autocrlf true
 # Revisar la Configuración
 git config --list
 
-# ---   Configuración de git con tu repo remoto (github)
+
+
+# ---   Configuración de las llaves ssh en tu repo remoto (github)
 # Generar tu propio par de llaves ssh (formada por una key publica y otra privada)
 # CUIDADO!!! Nunca compartas tu llave privada
 ssh-keygen
 # Comparte tu llave PUBLICA (.pub), con tu cuenta en Github
 ssh-copy-id -i ~/.ssh/id_rsa.pub gituser@git.server.com
-# Agregar a git un repositorio remoto (origin), github en este caso 
-git remote add origin gituser@git.server.com:project.git
-git remote add origin https://github.com/cubeton/mynewrepository.git
+
 
 # A partir de este momento puedes: 
 # 1. Iniciar un proyecto y subirlo a Github
@@ -59,6 +63,10 @@ git status -s
 
 # Crea un punto de control y agrega los cambios en "stage" con commit, agregandole un mensaje "-m" lo suficientemente claro sobre los cambios realizados.  
 git commit -m 'Este es el commit inicial'
+
+# Agregar a git un repo remoto (origin) vacio (bare remote), github en este caso
+git remote add origin gituser@git.server.com:project.git
+git remote add origin https://github.com/cubeton/mynewrepository.git
 
 # Guarda los cambios en el repositorio remoto "origin" en la rama "master"
 git push origin master 
@@ -100,7 +108,11 @@ https://stackoverflow.com/questions/5561295/what-does-git-push-u-mean
 https://mislav.net/2010/07/git-tips/
 
 
+#########################################################
+### Ejemplos
+#######################################################
 
+# Crear un repo local, agregar un remoto (en github), y hacer push 
 git init
 git add .
 git commit -m "JIRC First Commit"
@@ -110,7 +122,7 @@ git remote add origin https://github.com/JircRivera/chepinas.git
 git remote -v
 git push -u origin master
 
-# after modifying a file:
+# Stage, Commit and Push:
 git add .
 git commit -m "JIRC Update git_github"
 git push
@@ -132,7 +144,25 @@ git remote add origin https://github.com/JircRivera/freelanceWebPage01.git
 git remote -v
 git push -u origin master
 
-# Updating a Repo 
+# Stage, Commit and Push:
 git add .
 git commit -m "Add README.txt"
 git push
+
+
+
+#########################################################
+### git topics
+#######################################################
+
+# Difference between origin and upstream
+https://stackoverflow.com/questions/9257533/what-is-the-difference-between-origin-and-upstream-on-github
+https://i.stack.imgur.com/cEJjT.png
+
+# Fork a Repo
+https://help.github.com/en/articles/fork-a-repo
+
+
+
+
+
