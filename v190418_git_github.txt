@@ -188,7 +188,15 @@ https://help.github.com/en/articles/caching-your-github-password-in-git
 # Connecting to GitHub with SSH
 https://help.github.com/en/articles/connecting-to-github-with-ssh
 
+# List your existing remotes
+https://help.github.com/en/articles/changing-a-remotes-url
+git remote -v
 
+# Change remote URL from https to ssh 
+git remote set-url origin git@github.com:JircRivera/chepinas.git
+
+# Change remote URL from ssh to https 
+git remote set-url origin https://github.com/JircRivera/chepinas.git
 
 
 
@@ -208,5 +216,7 @@ ssh-add ~/.ssh/id_rsa
 Add the SSH key to your GitHub account
 
 # Comparte tu llave PUBLICA (.pub), con tu cuenta en Github [NO FUNCIONO]
+https://www.ssh.com/ssh/copy-id
 ssh-copy-id -i ~/.ssh/id_rsa.pub gituser@git.server.com
 ssh-copy-id -i ~/.ssh/id_rsa.pub git@github.com:JircRivera
+
