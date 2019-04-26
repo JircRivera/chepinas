@@ -27,14 +27,20 @@ git config --list
 
 # ---   Configuración de las llaves ssh en tu repo remoto (github) [VER NOTAS de ssh-agent EN ssh topics]
 # CUIDADO!!! Nunca compartas tu llave privada
+# Make sure the client allows public key authentication. Check that /etc/ssh/config includes 
+https://www.ssh.com/ssh/copy-id
+PubkeyAuthentication yes.
 # Checa si ya tienes un par de llaves ssh, generalmente se encuentran en:
 ~/.ssh
 # Generar tu propio par de llaves ssh (formada por una key publica y otra privada)
 ssh-keygen
 # Revisar que se tengan los siguientes permisos:
+https://www.howtogeek.com/168119/fixing-warning-unprotected-private-key-file-on-linux/
 chmod 600 ~/.ssh/id_rsa
 chmod 600 ~/.ssh/id_rsa.pub
 chmod 644 ~/.ssh/known_hosts
+# Start the ssh-agent in the background.
+eval "$(ssh-agent -s)"
 # Agrega tu llave privada ssh al agente: ssh-agent.
 ssh-add ~/.ssh/id_rsa
 # Comparte tu llave PUBLICA (.pub), con tu cuenta en Github
@@ -46,6 +52,9 @@ xclip -sel clip < ~/.ssh/id_rsa.pub
 ## Entra en: https://github.com/settings/keys y haz clic en "New SSH key" 
 # Comprueba tu conexion ssh
 ssh -T git@github.com
+ssh -i ~/.ssh/id_rsa.pub git@github.com
+# Revisa el estatus de tu repo
+git status
 
 
 # A partir de este momento puedes: 
@@ -223,7 +232,7 @@ enter the passphrase manually each time the ssh key is used.
 eval "$(ssh-agent -s)"
 ssh-add ~/.ssh/id_rsa
 
-# Comparte tu llave PUBLICA (.pub), con tu cuenta en Github [NO FUNCIONO]
+# Comparte tu llave PUBLICA (.pub), con tu cuenta en servidor de git [NO FUNCIONO]
 https://www.ssh.com/ssh/copy-id
 ssh-copy-id -i ~/.ssh/id_rsa.pub git@github.com
 
