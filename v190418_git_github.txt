@@ -31,7 +31,16 @@ git config --list
 ~/.ssh
 # Generar tu propio par de llaves ssh (formada por una key publica y otra privada)
 ssh-keygen
+# Revisar que se tengan los siguientes permisos:
+chmod 600 ~/.ssh/id_rsa
+chmod 600 ~/.ssh/id_rsa.pub
+chmod 644 ~/.ssh/known_hosts
+# Agrega tu llave privada ssh al agente: ssh-agent.
+ssh-add ~/.ssh/id_rsa
 # Comparte tu llave PUBLICA (.pub), con tu cuenta en Github
+## OPCION 1:  [NO FUNCIONÓ]
+ssh-copy-id -i ~/.ssh/id_rsa.pub git@github.com
+## OPCION 2:
 ## Copia el contenido de: ~/.ssh/id_rsa.pub
 xclip -sel clip < ~/.ssh/id_rsa.pub
 ## Entra en: https://github.com/settings/keys y haz clic en "New SSH key" 
@@ -213,10 +222,11 @@ This is optionally used when the ssh is created with a passphrase and avoids to
 enter the passphrase manually each time the ssh key is used.
 eval "$(ssh-agent -s)"
 ssh-add ~/.ssh/id_rsa
-Add the SSH key to your GitHub account
 
 # Comparte tu llave PUBLICA (.pub), con tu cuenta en Github [NO FUNCIONO]
 https://www.ssh.com/ssh/copy-id
-ssh-copy-id -i ~/.ssh/id_rsa.pub gituser@git.server.com
-ssh-copy-id -i ~/.ssh/id_rsa.pub git@github.com:JircRivera
+ssh-copy-id -i ~/.ssh/id_rsa.pub git@github.com
+
+
+
 
