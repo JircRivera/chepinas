@@ -1,6 +1,29 @@
+#########################################################
+### Gitkraken y GitLab
+#######################################################
+
+# Pasos para crear tu proyecto en GitLab con submódulos utilizando Gitkraken y GitLab
+
+Crear proyecto en GitLab_UAPT o gitlab.com
+Inicializar proyecto (con un Readme por ejemplo)
+Clonar Repo a mi PC
+Copiar y Pegar mis archivos a la carpeta del repo recien clonado
+Abrir repo con Gitkraken
+Hacer Stage, Commit y Push de los nuevos archivos que copiaste a la carpeta del repo
+Si tu proyecto ya tiene submodulos y no los reconoce cuando copiaste los archivos a tu pc, entonces
+tienes que borra los submodulos y agregarlos nuevamente en Gitkraken.
+
+
+
+
+
+
+#########################################################
+### Git
+#######################################################
+
 # git con Github, la chepina (El recetario jejej)
 # git y github son dos cosas diferentes, git (herramienta o aplicación para gestionar un Distributed Version Control System) y Github (servicio en la nube para hostear un servidor git o repositorio git remoto).
-
 
 # --- Prerequisitos:
 # 1. instalar git https://git-scm.com/

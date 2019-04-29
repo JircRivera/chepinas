@@ -1,0 +1,31 @@
+Video Streaming
+
+# Installing OBS
+https://obsproject.com/download
+.. Install ffmpeg
+sudo apt install ffmpeg 
+.. Install obs-studio
+sudo apt install obs-studio
+
+# OBS Studio Tutorial 2018 (Make Your Streams Look Pro)
+https://www.youtube.com/watch?v=j2HzbY8E4yQ
+
+# LiveStream in Youtube
+https://www.youtube.com/watch?v=OtJHX7O3p5U&list=PLsDhsOkbwsC5w94M1C_MvdEHge-_XpTAU
+
+
+Tools
+# Easyscreencast 
+https://extensions.gnome.org/extension/690/easyscreencast/
+
+# Draw on your screen (like:  Epic Pen for Windows)
+https://extensions.gnome.org/extension/1683/draw-on-you-screen/
+Super + Alt + D
+
+# Flameshot, screenshot tool
+https://github.com/lupoDharkael/flameshot/releases/
+
+
+
+
+

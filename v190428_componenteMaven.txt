@@ -1,0 +1,29 @@
+#########################################################
+### Componente con librerias Maven
+#######################################################
+
+# Pasos para crear un componente con las librerias de Maven
+Crear proyecto de Maven en Netbeans
+Validar el archivo pom:
+* Verificar nombre del componente (artifactId del groupId: org.uapt.genetic)
+    <groupId>org.uapt.genetic</groupId>
+    <artifactId>AutoManager</artifactId>
+    <version>1.0</version>
+* Agregar el repository, es el link donde se encuentran las librerias (tabicon).
+    <repositories>
+        <repository>
+            <id>s3.artifacts.snapshot</id>
+            <name>AWS Release Repository</name>
+            <url>https://s3.amazonaws.com/seminario-uapt-libs/args/release/</url>
+        </repository>
+    </repositories>
+* Especificar que nuestro componente tiene dependencia de las librerias (tabicon).
+    <dependencies>
+        <dependency>
+            <groupId>org.seminario.maven.libs</groupId>
+            <artifactId>args</artifactId>
+            <version>1.1</version>
+        </dependency>
+    </dependencies>
+* Validar (en la sección build), que el mainClass sea tu clase principal de tu proyecto.
+<mainClass>automanager.Main</mainClass>
