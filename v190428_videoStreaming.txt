@@ -13,6 +13,9 @@ https://www.youtube.com/watch?v=j2HzbY8E4yQ
 # LiveStream in Youtube
 https://www.youtube.com/watch?v=OtJHX7O3p5U&list=PLsDhsOkbwsC5w94M1C_MvdEHge-_XpTAU
 
+# Get the Youtube stream key
+# In your youtube home, click in the videocamera icon (upper right corner), or go to https://www.youtube.com/live_dashboard 
+# In the section "Encoder Setup" you will find the Stream name/key
 
 Tools
 # Easyscreencast 

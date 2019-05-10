@@ -56,7 +56,9 @@ PubkeyAuthentication yes.
 # Checa si ya tienes un par de llaves ssh, generalmente se encuentran en:
 ~/.ssh
 # Generar tu propio par de llaves ssh (formada por una key publica y otra privada)
+## Use the default ssh-keygen or elliptic curves based ssh-keygen
 ssh-keygen
+ssh-keygen -t ecdsa -b 521
 # Revisar que se tengan los siguientes permisos:
 https://www.howtogeek.com/168119/fixing-warning-unprotected-private-key-file-on-linux/
 chmod 600 ~/.ssh/id_rsa
@@ -75,6 +77,7 @@ xclip -sel clip < ~/.ssh/id_rsa.pub
 ## Entra en: https://github.com/settings/keys y haz clic en "New SSH key" 
 # Comprueba tu conexion ssh
 ssh -T git@github.com
+ssh -T git@gitlab.com
 ssh -i ~/.ssh/id_rsa.pub git@github.com
 # Revisa el estatus de tu repo
 git status
