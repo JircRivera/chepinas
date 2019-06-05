@@ -79,8 +79,7 @@ xclip -sel clip < ~/.ssh/id_rsa.pub
 ssh -T git@github.com
 ssh -T git@gitlab.com
 ssh -i ~/.ssh/id_rsa.pub git@github.com
-# Revisa el estatus de tu repo
-git status
+
 
 
 # A partir de este momento puedes: 
@@ -104,7 +103,7 @@ EOF
 # Revisa los cambio en tu carpeta, los cambios se etiquetan con "??"
 git status -s
 
-# Agrega todos los cambios al "indice" mejor conocido como el "escenario" (staging). Puedes agregar solo los archivos que te interesan con "add myfile"
+# Agrega todos los cambios al "indice" mejor conocido como el "escenario" (staging). Puedes agregar solo los archivos que te interesan con "git add myfile"
 # IPORTANTE!!! el punto al final de la instrucción significa TODOS los archivos con cambios.
 git add .
 
@@ -119,7 +118,7 @@ git remote add origin gituser@git.server.com:project.git
 git remote add origin https://github.com/cubeton/mynewrepository.git
 
 # Guarda los cambios en el repositorio remoto "origin" en la rama "master"
-git push origin master 
+git push origin master
 
 # Revisa el log para consultar cualquier cambio en git 
 git log
@@ -207,6 +206,18 @@ git add .
 git commit -m "Add README.txt"
 git push
 
+------------------------------------------
+# Crear nueva llave en mi equipo
+## Se usa el generador de llaves, se indica el nombre del archivo y la contrasenia para la llave
+ssh-keygen -t ecdsa -b 521
+## Se activa el agente de llaves 
+eval "$(ssh-agent -s)"
+## Se agrega la llave privada al agente
+ssh-add ~/.ssh/id_ecdsa_jirc_xdesign-Satellite-C655_Ubuntu18042LTS
+## Se copia al portapapeles y se pega en la pagina de gitlab (donde se agregan las llaves)
+xclip -sel clip < ~/.ssh/id_ecdsa_jirc_xdesign-Satellite-C655_Ubuntu18042LTS.pub
+## Se prueba la conexion
+ssh -i ~/.ssh/id_ecdsa_jirc_xdesign-Satellite-C655_Ubuntu18042LTS.pub git@gitlab.com
 
 
 
