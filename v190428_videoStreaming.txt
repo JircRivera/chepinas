@@ -32,3 +32,8 @@ https://github.com/lupoDharkael/flameshot/releases/
 
 
 
+0.23.11
+0.50
+2.12.35
+
+

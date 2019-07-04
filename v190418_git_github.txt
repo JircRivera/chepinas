@@ -50,8 +50,8 @@ git config --list
 
 # ---   Configuración de las llaves ssh en tu repo remoto (github) [VER NOTAS de ssh-agent EN ssh topics]
 # CUIDADO!!! Nunca compartas tu llave privada
-# Make sure the client allows public key authentication. Check that /etc/ssh/config includes 
 https://www.ssh.com/ssh/copy-id
+# Make sure the client allows public key authentication. Check that /etc/ssh/config includes 
 PubkeyAuthentication yes.
 # Checa si ya tienes un par de llaves ssh, generalmente se encuentran en:
 ~/.ssh
@@ -173,6 +173,7 @@ https://mislav.net/2010/07/git-tips/
 git init
 git add .
 git commit -m "JIRC First Commit"
+# Crear el repo "chepinas" (VACIO) en github 
 # Sets the new remote
 git remote add origin https://github.com/JircRivera/chepinas.git
 # Verifies the new remote URL
@@ -191,10 +192,11 @@ git commit -m "JIRC-branch Update git_github"
 git checkout -b JIRC_01
 git push -u origin JIRC_01
 
-# Crear repo local, agreagar un origin y hacer push
+# Crear repo local, agregar un origin y hacer push
 git init
 git add .
 git commit -m "JIRC First Commit"
+# Crear el repo "freelanceWebPage01" (VACIO) en github
 # Sets the new remote
 git remote add origin https://github.com/JircRivera/freelanceWebPage01.git
 # Verifies the new remote URL
@@ -207,8 +209,29 @@ git commit -m "Add README.txt"
 git push
 
 ------------------------------------------
+
+# Crear repo local "HelloWorld", crear repo en GitLab, agregar el origin (remote), stage, commit, push
+-> Crear folder del proyecto y guardar archivos/carpetas
+mkdir HelloWorld
+cd HelloWorld
+-> Inicializar el repo
+git init
+-> Crear el repo "freelanceWebPage01" (VACIO) en GitLab
+https://gitlab.com/JorgeRIC/testhelloworld
+-> Sets the new remote (copy the URL from "Clone" button , "Clone with https")
+git remote add origin https://gitlab.com/JorgeRIC/testhelloworld.git
+-> Verifies the new remote URL
+git remote -v
+-> Stage
+git add .
+-> Commit
+git commit -m "JIRC First Commit"
+-> Push
+git push -u origin master
+
+------------------------------------------
 # Crear nueva llave en mi equipo
-## Se usa el generador de llaves, se indica el nombre del archivo y la contrasenia para la llave
+## Se usa el generador de llaves, el prompt pedirá el nombre del archivo y la contrasenia para la llave
 ssh-keygen -t ecdsa -b 521
 ## Se activa el agente de llaves 
 eval "$(ssh-agent -s)"
@@ -220,6 +243,12 @@ xclip -sel clip < ~/.ssh/id_ecdsa_jirc_xdesign-Satellite-C655_Ubuntu18042LTS.pub
 ssh -i ~/.ssh/id_ecdsa_jirc_xdesign-Satellite-C655_Ubuntu18042LTS.pub git@gitlab.com
 
 
+# Push an existing Git repository
+cd existing_repo
+git remote rename origin old-origin
+git remote add origin git@gitlab.com:JorgeRIC/testtempo.git
+git push -u origin --all
+git push -u origin --tags
 
 
 
