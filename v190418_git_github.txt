@@ -103,15 +103,15 @@ EOF
 # Revisa los cambio en tu carpeta, los cambios se etiquetan con "??"
 git status -s
 
-# Agrega todos los cambios al "indice" mejor conocido como el "escenario" (staging). Puedes agregar solo los archivos que te interesan con "git add myfile"
+# Tracking files. Agrega todos los cambios al "indice" mejor conocido como el "escenario" (staging). Puedes agregar solo los archivos que te interesan con "git add myfile"
 # IPORTANTE!!! el punto al final de la instrucción significa TODOS los archivos con cambios.
 git add .
 
 # Revisa nuevamente el estatus. ahora los archivos estan etiquetados con "A"
 git status -s
 
-# Crea un punto de control y agrega los cambios en "stage" con commit, agregandole un mensaje "-m" lo suficientemente claro sobre los cambios realizados.  
-git commit -m 'Este es el commit inicial'
+# Crea un punto de control (snapshot) agreegando los cambios en "stage" con el comando commit, agregandole un mensaje "-m" lo suficientemente claro sobre los cambios realizados.  
+git commit -m 'Este es un snapshot'
 
 # Agregar a git un repo remoto (origin) vacio (bare remote), github en este caso
 git remote add origin gituser@git.server.com:project.git
@@ -282,7 +282,9 @@ git remote set-url origin git@github.com:JircRivera/chepinas.git
 # Change remote URL from ssh to https 
 git remote set-url origin https://github.com/JircRivera/chepinas.git
 
-
+# Git and Google Drive
+Creating a server in your own computer inside the google drive folder.
+https://www.iexplain.org/using-git-with-google-drive-a-tutorial/
 
 
 
