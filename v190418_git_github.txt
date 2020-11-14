@@ -237,6 +237,8 @@ ssh-keygen -t ecdsa -b 521
 eval "$(ssh-agent -s)"
 ## Se agrega la llave privada al agente
 ssh-add ~/.ssh/id_ecdsa_jirc_xdesign-Satellite-C655_Ubuntu18042LTS
+## Validar que la llave se haya agregado correctamente (muestra el fingerprint)
+ssh-add -l -E md5
 ## Se copia al portapapeles y se pega en la pagina de gitlab (donde se agregan las llaves)
 xclip -sel clip < ~/.ssh/id_ecdsa_jirc_xdesign-Satellite-C655_Ubuntu18042LTS.pub
 ## Se prueba la conexion
@@ -286,7 +288,11 @@ git remote set-url origin https://github.com/JircRivera/chepinas.git
 Creating a server in your own computer inside the google drive folder.
 https://www.iexplain.org/using-git-with-google-drive-a-tutorial/
 
-
+# 
+* Reference:
+```sh
+git config --global alias.lgb "log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset%n' --abbrev-commit --date=relative --branches"
+```
 
 
 
